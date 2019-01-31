@@ -1,5 +1,5 @@
 import unittest
-from src.tube_crawler import TubeCrawler
+from tube_searcher_bot.tube_crawler import TubeCrawler
 
 class TestTubeCrawler(unittest.TestCase):
 

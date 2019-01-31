@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-from tube_crawler import TubeCrawler
-from tweeter import Tweeter
-import config
+from tube_searcher_bot.tube_crawler import TubeCrawler
+from tube_searcher_bot.tweeter import Tweeter
+from tube_searcher_bot import config
 
-def main():
+def lambda_handler(event, context):
+    result = process()
+    return { 'tweetedURL': result }
+
+def process():
     t = TubeCrawler()
     movies = t.movies_from_query("Hybrid Rudiments")
     movies += t.movies_from_query("Steve Gadd Lick")
@@ -14,10 +18,3 @@ def main():
     chosen = t.choose(movies)
     tw.reply(config.REPLY_TO, chosen)
     return chosen
-
-def lambda_handler(event, context):
-    result = main()
-    return { 'tweetedURL': result }
-
-if __name__ == '__main__':
-    main()

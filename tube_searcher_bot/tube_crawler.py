@@ -3,7 +3,7 @@
 
 import random
 import re
-from crawler import Crawler
+from tube_searcher_bot.crawler import Crawler
 
 class TubeCrawler(Crawler):
 

@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from requests_oauthlib import OAuth1Session
-import config
+from tube_searcher_bot import config
 
 def getOAuth():
   return OAuth1Session(
