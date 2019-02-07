@@ -11,9 +11,10 @@ def lambda_handler(event, context):
 
 def process():
     t = TubeCrawler()
-    movies = t.movies_from_query("Hybrid Rudiments")
-    movies += t.movies_from_query("Steve Gadd Lick")
-    movies += t.movies_from_list("PLleS-Mfyj_fcVg4KxLTARvklDuObTd9zc", 15)
+    # todo: enable array configuration and iteration
+    movies = t.movies_from_query(config.KEYWORD_1)
+    movies += t.movies_from_query(config.KEYWORD_2)
+    movies += t.movies_from_list(config.CHANNEL, 15)
     tw = Tweeter()
     chosen = t.choose(movies)
     tw.reply(config.REPLY_TO, chosen)

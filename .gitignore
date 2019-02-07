@@ -1,3 +1,13 @@
+build/
+dist/
+*.egg-info/
+*.egg
+__pycache__/
+
+# for MacOS
+.DS_Store
+
+# for .zip packaging
+requirements.txt
 lambda.zip
-__pycache__
-tube_searcher_bot.egg-info
+vendor/

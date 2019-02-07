@@ -2,8 +2,9 @@
 
 rm lambda.zip
 
-cd src
-pip3 install -r requirements.txt -t ./lib
-zip ../lambda.zip *.py
-cd lib
-zip -r ../../lambda.zip *
+# Download all dependencies.
+pipenv lock -r > requirements.txt
+pipenv run pip download -d ./tube_searcher_bot/vendor -r requirements.txt
+
+zip -r lambda.zip tube_searcher_bot/
+zip lambda.zip setup.py
