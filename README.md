@@ -15,9 +15,15 @@ ACCESS_TOKEN_SECRET = "ACCESS_TOKEN_SECRET of Your Twitter App"
 
 REPLY_TO = "Twitter_Account_Name(optional. without '@')"
 
-KEYWORD_1 = "key word as you like"
-KEYWORD_2 = "key word as you like, again"
-CHANNEL = "id of a channel you love"
+KEYWORDS = [
+    "key word as you like",
+    "another key word"
+]
+CHANNELS = [
+    "id_of_favorite_list",
+    "another_one",
+    ...
+]
 
 ```
 
@@ -46,3 +52,5 @@ command below makes .zip file that is executable as AWS Lambda handler.
 ```
 $ ./package_lambda.sh
 ```
+
+because handler is within `tube_searcher_bot` package, handler function name will be `tube_searcher_bot.process.lambda_handler`.
