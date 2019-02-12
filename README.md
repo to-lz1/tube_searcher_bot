@@ -41,7 +41,7 @@ python main.py
 
 #### package as a AWS Lambda function.
 
-command below makes .zip file that is executable as AWS Lambda handler.(WIP)
+command below makes .zip file that is executable as AWS Lambda handler.
 
 ```
 $ ./package_lambda.sh
