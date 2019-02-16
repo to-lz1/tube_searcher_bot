@@ -13,7 +13,9 @@ CONSUMER_SECRET     = "CONSUMER_SECRET of Your Twitter App"
 ACCESS_TOKEN        = "ACCESS_TOKEN of Your Twitter App"
 ACCESS_TOKEN_SECRET = "ACCESS_TOKEN_SECRET of Your Twitter App"
 
-REPLY_TO = "Twitter_Account_Name(optional. without '@')"
+REPLY_TO = [
+    "Twitter_Account_Name(optional. without '@')"
+]
 
 KEYWORDS = [
     "key word as you like",

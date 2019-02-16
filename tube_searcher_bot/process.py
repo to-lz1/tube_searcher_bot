@@ -18,5 +18,7 @@ def process():
         movies += t.movies_from_channel(channel)
     tw = Tweeter()
     chosen = t.choose(movies)
-    tw.reply(config.REPLY_TO, chosen)
+    
+    for reply_to in config.REPLY_TO:
+        tw.reply(reply_to, chosen)
     return chosen
